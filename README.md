@@ -72,3 +72,11 @@ While these components are primarily client-side, they are designed to integrate
    - Components are structured to be easily imported and used in different Remix routes.
 
 These components demonstrate how dynamic and attractive user interfaces can be created within the Remix ecosystem, leveraging React capabilities and modern animation and styling libraries.
+
+## Live Demo
+
+To see these animation components in action and explore their capabilities, visit our demo page:
+
+[Remix Animation Components Demo](https://roberto.lweb.ch/remix)
+
+This live demonstration showcases the CloudTextBlock and TypewriterGlitchText components, allowing you to interact with them and experience firsthand how they can enhance your Remix applications. Visit the link to explore the dynamic and engaging user interfaces created with these components.

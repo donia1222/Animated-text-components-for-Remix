@@ -1,4 +1,4 @@
-# General Description of Animation Components in Remix
+# Animated text components for Remix
 
 ![Animation Components Preview](https://lweb.ch/imagen.png)
 

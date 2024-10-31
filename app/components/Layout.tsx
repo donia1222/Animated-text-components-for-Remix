@@ -37,24 +37,8 @@ export default function Component({ children }: { children: React.ReactNode }) {
               <Link to="/" className="text-gray-600 hover:text-indigo-600 transition duration-150 ease-in-out"></Link>
 
             </nav>
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button onClick={toggleMenu} className="text-gray-600 hover:text-indigo-600 focus:outline-none">
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
           </div>
         </div>
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition duration-150 ease-in-out">Inicio</Link>
-              <Link to="/about" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition duration-150 ease-in-out">Acerca de</Link>
-              <Link to="/contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 transition duration-150 ease-in-out">Contacto</Link>
-            </div>
-          </div>
-        )}
       </header>
 
       {/* Main content */}

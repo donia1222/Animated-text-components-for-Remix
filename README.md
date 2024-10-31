@@ -2,6 +2,7 @@
 
 ![Animation Components Preview](https://lweb.ch/imagen.png)
 
+
 ## Structure and Remix Features
 
 1. **Client Components**: 

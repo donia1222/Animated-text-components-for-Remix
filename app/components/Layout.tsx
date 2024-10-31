@@ -42,13 +42,13 @@ export default function Component({ children }: { children: React.ReactNode }) {
       </header>
 
       {/* Main content */}
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+
         <div className="px-4 py-6 sm:px-0">
           <div className="bg-white bg-opacity-80 backdrop-blur-md rounded-lg shadow-lg p-6">
             {children}
           </div>
         </div>
-      </main>
+
     </div>
   );
 }

@@ -10,6 +10,8 @@ import CloudTextBlock3 from '~/components/showcase/CloudTextBlock3'
 import CloudTextBlock4 from '~/components/showcase/CloudTextBlock4'
 import CloudTextBlock5 from '~/components/showcase/CloudTextBlock5'
 import CloudTextBlock6 from '~/components/showcase/CloudTextBlock6'
+import CloudTextBlock7 from '~/components/showcase/CloudTextBlock7'
+import CloudTextBlock8 from '~/components/showcase/CloudTextBlock8'
 
 const components = [
   { name: '', Component: CloudTextBlock, description: 'A dynamic cloud-like text animation with gradient colors.' },
@@ -18,6 +20,8 @@ const components = [
   { name: '', Component: CloudTextBlock3, description: 'Text with a glitch effect, perfect for a cyberpunk aesthetic.' },
   { name: '', Component: CloudTextBlock6, description: 'Smooth text morphing animation between different phrases.' },
   { name: '', Component: CloudTextBlock2, description: 'Text with a flowing gradient animation resembling waves.' },
+  { name: '', Component: CloudTextBlock7, description: 'Text with a flowing gradient animation resembling waves.' },
+  { name: '', Component: CloudTextBlock8, description: 'Text with a flowing gradient animation resembling waves.' },
 ]
 
 export default function Index() {

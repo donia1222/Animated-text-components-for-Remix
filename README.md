@@ -1,6 +1,6 @@
 # Animated text components for Remix
 
-![Animation Components Preview](https://lweb.ch/imagen.png)
+![Animation Components Preview](https://animated-text-components-for-remix.vercel.app)
 
 ## Structure and Remix Features
 

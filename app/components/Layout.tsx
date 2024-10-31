@@ -27,8 +27,8 @@ export default function Component({ children }: { children: React.ReactNode }) {
             animate={{ opacity: 1, y: 0 }}  // Animación: opacidad completa y posición original
             transition={{ duration: 1, ease: 'easeOut' }} // Duración y tipo de transición
           >
-            Animierte Textkomponenten für<span className="ml-2 text-[#ff69b4] text-4xl font-bold">
-            Remix 
+            Animation<span className="ml-2 text-[#ff69b4] text-3xl font-bold">
+            Showcaser
           </span>
           </motion.h1>
             </div>

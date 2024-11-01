@@ -39,7 +39,7 @@ export default function Component({ children }: { children: React.ReactNode }) {
               </Link>
               <Link to="/contact" className="flex items-center text-gray-700 hover:text-red-600 transition duration-150 ease-in-out">
                 <Image className="h-5 w-5 mr-1" />
-                <span>Carousel</span>
+                <span>Modern Carousel</span>
               </Link>
 
             </nav>
@@ -67,7 +67,7 @@ export default function Component({ children }: { children: React.ReactNode }) {
 
               <Link to="/contact" onClick={closeMenu} className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition duration-150 ease-in-out">
                 <Image className="h-5 w-5 mr-2" />
-                <span>Carousel</span>
+                <span>Modern Carousel</span>
               </Link>
 
             </div>

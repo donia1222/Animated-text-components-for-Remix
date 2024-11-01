@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import { useState } from "react";
-import { Menu, X, Sparkles, MousePointer } from "lucide-react";
+import { Menu, X, Sparkles, MousePointer, Image } from "lucide-react";
 
 export default function Component({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,6 +37,11 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <MousePointer className="h-5 w-5 mr-1" />
                 <span>Modern Button</span>
               </Link>
+              <Link to="/contact" className="flex items-center text-gray-700 hover:text-red-600 transition duration-150 ease-in-out">
+                <Image className="h-5 w-5 mr-1" />
+                <span>Carousel</span>
+              </Link>
+
             </nav>
             {/* Mobile menu button */}
             <div className="md:hidden">
@@ -59,6 +64,12 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <MousePointer className="h-5 w-5 mr-2" />
                 <span>Modern Button</span>
               </Link>
+
+              <Link to="/contact" onClick={closeMenu} className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition duration-150 ease-in-out">
+                <Image className="h-5 w-5 mr-2" />
+                <span>Carousel</span>
+              </Link>
+
             </div>
           </div>
         )}

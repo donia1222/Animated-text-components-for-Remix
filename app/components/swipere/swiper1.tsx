@@ -1,0 +1,149 @@
+'use client';
+
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Copy, Check } from 'lucide-react';
+
+// Importa los estilos de Swiper
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const images = [
+  '/images/dev1.jpg',
+  '/images/dev2.jpg',
+  '/images/dev3.jpg',
+  // Agrega más rutas a tus imágenes
+];
+
+const CarouselComponent: React.FC = () => {
+  const [showCode, setShowCode] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const toggleCode = () => setShowCode(!showCode);
+
+  const copyCode = () => {
+    navigator.clipboard.writeText(codeString);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const codeString = `
+'use client';
+
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { motion } from 'framer-motion';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const images = [
+  '/images/mic.png',
+  '/images/mic.png',
+  '/images/mic.png',
+];
+
+const CarouselComponent: React.FC = () => {
+  return (
+    <div className="container mx-auto px-4">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 5000 }}
+        loop={true}
+        className="mySwiper"
+      >
+        {images.map((src, index) => (
+          <SwiperSlide key={index}>
+            <motion.div
+              className="relative w-full h-64 md:h-96"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <img
+                src={src}
+                alt={\`Slide \${index + 1}\`}
+                className="object-cover w-full h-full rounded-lg shadow-md"
+              />
+            </motion.div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
+
+export default CarouselComponent;
+  `.trim();
+
+  return (
+    <div className="container mx-auto px-4">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 5000 }}
+        loop={true}
+        className="mySwiper"
+      >
+        {images.map((src, index) => (
+          <SwiperSlide key={index}>
+            <motion.div
+              className="relative w-full h-64 md:h-96"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <img
+                src={src}
+                alt={`Slide ${index + 1}`}
+                className="object-cover w-full h-full rounded-lg shadow-md"
+              />
+            </motion.div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="mt-4 flex justify-center">
+        <button
+          onClick={toggleCode}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+       {showCode ? 'Hide Code' : 'Show Code'}
+        </button>
+      </div>
+
+      <AnimatePresence>
+        {showCode && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="mt-4 relative"
+          >
+            <pre className="bg-gray-100 p-4 rounded-md text-sm overflow-x-auto">
+              <code>{codeString}</code>
+            </pre>
+            <button
+              onClick={copyCode}
+              className="absolute top-2 right-2 p-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200"
+              aria-label="Copiar código"
+            >
+              {copied ? <Check size={18} /> : <Copy size={18} />}
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+export default CarouselComponent;

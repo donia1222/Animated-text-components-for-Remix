@@ -115,7 +115,7 @@ export default CarouselComponent;
       <div className="mt-4 flex justify-center">
         <button
           onClick={toggleCode}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-2 px-4 rounded-full flex items-center space-x-2 transition-all duration-200 transform hover:scale-105"
         >
        {showCode ? 'Hide Code' : 'Show Code'}
         </button>

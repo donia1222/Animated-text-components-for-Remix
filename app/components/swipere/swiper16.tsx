@@ -225,7 +225,7 @@ export default function Component() {
             className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-bold py-2 px-4 rounded-full flex items-center space-x-2 transition-all duration-200 transform hover:scale-105"
           >
             <Code size={20} />
-            <span>{showCode ? 'Hide Code' : 'View Code'}</span>
+            <span>  {showCode ? 'Hide Code' : 'Show Code'}</span>
           </button>
         </div>
 

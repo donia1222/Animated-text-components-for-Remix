@@ -136,8 +136,8 @@ export default function ProductCarousel() {
   return (
     <div className="space-y-8">
          <h1 className="text-3xl font-bold mb-6 text-pink-600">Image Text Modal</h1>
-      <div className="relative w-full h-[600px] bg-gradient-to-br from-purple-700 to-indigo-900 overflow-hidden flex items-center justify-center">
-        <div className="relative w-[800px] h-[400px] ">
+      <div className="relative w-full h-[600px] bg-gradient-to-br from-purple-700 to-indigo-200 overflow-hidden flex items-center justify-center">
+        <div className="relative w-[800px] h-[400px] rounded-lg ">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -145,13 +145,13 @@ export default function ProductCarousel() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.3 }}
-              className="absolute inset-0 flex items-center justify-center"
+              className="absolute inset-0 flex items-center justify-center rounded-lg "
             >
-              <div className="relative w-full h-full" onClick={toggleInfo}>
+              <div className="relative w-full h-full rounded-lg " onClick={toggleInfo}>
                 <img
                   src={products[currentIndex].image}
                   alt={products[currentIndex].name}
-                  className="w-full h-full object-contain cursor-pointer"
+                  className="w-full h-full object-contain cursor-pointer rounded-lg "
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-black bg-opacity-50 rounded-full p-2">

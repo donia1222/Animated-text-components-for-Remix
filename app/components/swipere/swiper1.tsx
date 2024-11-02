@@ -6,7 +6,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Copy, Check } from 'lucide-react';
 
-// Importa los estilos de Swiper
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -15,7 +15,7 @@ const images = [
   '/images/dev1.jpg',
   '/images/dev2.jpg',
   '/images/dev3.jpg',
-  // Agrega más rutas a tus imágenes
+  // Add more image paths here
 ];
 
 const CarouselComponent: React.FC = () => {
@@ -85,7 +85,11 @@ export default CarouselComponent;
 
   return (
     <div className="space-y-8">
-       <h1 className="text-3xl font-bold mb-6 text-pink-600">Dev Showcase Slider</h1>
+      <h1 className="text-3xl font-bold mb-6 text-pink-600">Dev Showcase Slider</h1>
+      <p className="text-lg text-gray-700 mb-4">
+        An interactive carousel showcasing development-related images. Features smooth transitions, 
+        autoplay, and responsive design. Built with Swiper and Framer Motion for optimal performance.
+      </p>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation
@@ -117,7 +121,7 @@ export default CarouselComponent;
           onClick={toggleCode}
           className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-2 px-4 rounded-full flex items-center space-x-2 transition-all duration-200 transform hover:scale-105"
         >
-       {showCode ? 'Hide Code' : 'Show Code'}
+          {showCode ? 'Hide Code' : 'Show Code'}
         </button>
       </div>
 
@@ -136,7 +140,7 @@ export default CarouselComponent;
             <button
               onClick={copyCode}
               className="absolute top-2 right-2 p-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200"
-              aria-label="Copiar código"
+              aria-label="Copy code"
             >
               {copied ? <Check size={18} /> : <Copy size={18} />}
             </button>

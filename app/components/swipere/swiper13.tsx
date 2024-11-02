@@ -106,6 +106,11 @@ export default TextImageScroll;
   return (
     <div className="space-y-8">
                   <h1 className="text-3xl font-bold mb-6 text-pink-600">Immersive Scroll Showcase</h1>
+                  <p className="text-lg text-gray-700 mb-4">
+        A captivating scroll-based component that creates an immersive visual experience. 
+        It features parallax scrolling effects, text animations, and dynamic image scaling. 
+        Built with React, Framer Motion, and Tailwind CSS for smooth, responsive interactions.
+      </p>
       <div ref={containerRef} className="relative h-[100vh] bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
         <div className="sticky top-0 h-screen overflow-hidden">
           <motion.div

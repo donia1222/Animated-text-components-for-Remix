@@ -160,6 +160,11 @@ export default function Component() {
   return (
     <div className="space-y-8">
  <h1 className="text-3xl font-bold mb-6 text-pink-600">Image Text Nav</h1>
+ <p className="text-lg text-gray-700 mb-4">
+        A dynamic and interactive tab-based navigation component showcasing different aspects of development. 
+        Features smooth transitions, responsive design, and a sleek dark theme. Built with React, Framer Motion, 
+        and Tailwind CSS for a modern and engaging user interface.
+      </p>
     <div className="bg-gradient-to-b from-slate-900/50 to-slate-900/90 flex flex-col items-center justify-center p-4 backdrop-blur-xl">
 
       <div className="w-full max-w-3xl flex flex-col items-center">

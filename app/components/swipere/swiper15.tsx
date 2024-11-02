@@ -136,6 +136,11 @@ export default function ProductCarousel() {
   return (
     <div className="space-y-8">
          <h1 className="text-3xl font-bold mb-6 text-pink-600">Image Text Modal</h1>
+         <p className="text-lg text-gray-700 mb-4">
+        An interactive product showcase featuring a smooth image carousel with modal information display. 
+        This component combines elegant animations, responsive design, and intuitive user interactions. 
+        Built with React, Framer Motion, and Tailwind CSS for a modern and engaging user experience.
+      </p>
       <div className="relative w-full h-[600px] bg-gradient-to-br from-purple-700 to-indigo-200 overflow-hidden flex items-center justify-center">
         <div className="relative w-[800px] h-[400px] rounded-lg ">
           <AnimatePresence mode="wait">

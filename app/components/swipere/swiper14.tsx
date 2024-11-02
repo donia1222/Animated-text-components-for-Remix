@@ -187,6 +187,11 @@ export default ImageTextSlider;
   return (
     <div className="space-y-8">
           <h1 className="text-3xl font-bold mb-6 text-pink-600">Image Text Slider</h1>
+          <p className="text-lg text-gray-700 mb-4">
+        An elegant and interactive slider component that combines images with descriptive text. 
+        It features smooth transitions, responsive design, and intuitive navigation. 
+        Built with React, Framer Motion, and Tailwind CSS for a seamless user experience.
+      </p>
       <div className="relative w-full max-w-6xl mx-auto h-[500px] bg-gray-100 rounded-xl overflow-hidden shadow-lg">
         <div className="flex h-full">
           <div className="w-1/2 relative overflow-hidden">

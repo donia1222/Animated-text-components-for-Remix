@@ -84,7 +84,8 @@ export default CarouselComponent;
   `.trim();
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="space-y-8">
+       <h1 className="text-3xl font-bold mb-6 text-pink-600">Dev Showcase Slider</h1>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation

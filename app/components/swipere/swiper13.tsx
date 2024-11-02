@@ -105,6 +105,7 @@ export default TextImageScroll;
 
   return (
     <div className="space-y-8">
+                  <h1 className="text-3xl font-bold mb-6 text-pink-600">Immersive Scroll Showcase</h1>
       <div ref={containerRef} className="relative h-[100vh] bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
         <div className="sticky top-0 h-screen overflow-hidden">
           <motion.div

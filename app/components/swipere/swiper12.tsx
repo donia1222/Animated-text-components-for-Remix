@@ -134,6 +134,7 @@ export default WideImageCarousel;
 
   return (
     <div className="space-y-8">
+          <h1 className="text-3xl font-bold mb-6 text-pink-600">Wide Image Carousel</h1>
       <div className="relative w-full h-[40vh] overflow-hidden bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
         <div className="absolute inset-0 flex items-center justify-center">
           {images.map((src, index) => {

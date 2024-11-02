@@ -135,6 +135,7 @@ export default function ProductCarousel() {
 
   return (
     <div className="space-y-8">
+         <h1 className="text-3xl font-bold mb-6 text-pink-600">Image Text Modal</h1>
       <div className="relative w-full h-[600px] bg-gradient-to-br from-purple-700 to-indigo-900 overflow-hidden flex items-center justify-center">
         <div className="relative w-[800px] h-[400px] ">
           <AnimatePresence mode="wait">

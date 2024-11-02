@@ -186,6 +186,7 @@ export default ImageTextSlider;
 
   return (
     <div className="space-y-8">
+          <h1 className="text-3xl font-bold mb-6 text-pink-600">Image Text Slider</h1>
       <div className="relative w-full max-w-6xl mx-auto h-[500px] bg-gray-100 rounded-xl overflow-hidden shadow-lg">
         <div className="flex h-full">
           <div className="w-1/2 relative overflow-hidden">

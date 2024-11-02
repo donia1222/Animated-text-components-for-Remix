@@ -7,6 +7,7 @@ import CloudTextBlock2d from '~/components/swipere/swiper12'
 import CloudTextBlock3d from '~/components/swipere/swiper13'
 import CloudTextBlock4d from '~/components/swipere/swiper14'
 import CloudTextBlock5d from '~/components/swipere/swiper15'
+import CloudTextBlock6d from '~/components/swipere/swiper16'
 
 
 
@@ -16,6 +17,7 @@ const components = [
   { name: '', Component: CloudTextBlock3d, description: 'A dynamic cloud-like text animation with gradient colors.' },
   { name: '', Component: CloudTextBlock4d, description: 'A dynamic cloud-like text animation with gradient colors.' },
   { name: '', Component: CloudTextBlock5d, description: 'A dynamic cloud-like text animation with gradient colors.' },
+  { name: '', Component: CloudTextBlock6d, description: 'A dynamic cloud-like text animation with gradient colors.' },
 
 ]
 

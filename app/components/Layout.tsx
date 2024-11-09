@@ -2,7 +2,7 @@
 
 import { Link, useLocation } from "@remix-run/react";
 import { useState } from "react";
-import { Menu, X, Sparkles, MousePointer, Image } from "lucide-react";
+import { Menu, X, Sparkles, MousePointer, Image, ExternalLink } from "lucide-react";
 
 export default function Component({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,6 +57,10 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <Image className="h-5 w-5 mr-1" />
                 <span>Modern Carousel</span>
               </Link>
+              <a href="https://roberto.lweb.ch" className={`${getLinkClass("")} text-green-600 hover:text-green-700`}>
+                <ExternalLink className="h-5 w-5 mr-1" />
+                <span>Go to LWEB</span>
+              </a>
             </nav>
             {/* Mobile menu button */}
             <div className="md:hidden">
@@ -82,6 +86,10 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <Image className="h-5 w-5 mr-2" />
                 <span>Modern Carousel</span>
               </Link>
+              <a href="https://roberto.lweb.ch" onClick={closeMenu} className={`${getLinkClass("")} text-green-600 hover:text-green-700`}>
+                <ExternalLink className="h-5 w-5 mr-2" />
+                <span>Go to LWEB</span>
+              </a>
             </div>
           </div>
         )}

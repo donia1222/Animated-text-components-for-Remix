@@ -8,13 +8,19 @@ export default function Component({ children }: { children: React.ReactNode }) {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const getLinkClass = (path: string) => {
     return `flex items-center px-3 py-2 rounded-md text-base font-medium ${location.pathname === path ? 'bg-cyan-500 text-white' : 'text-gray-700 hover:text-red-600 hover:bg-red-50'} transition duration-150 ease-in-out`;
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-red-100 relative">
+
       {/* SVG Background */}
       <div className="absolute inset-0 z-0 opacity-10">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -27,9 +33,12 @@ export default function Component({ children }: { children: React.ReactNode }) {
 
       {/* Header */}
       <header className="relative z-10 bg-white bg-opacity-90 backdrop-blur-md shadow-md">
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center"></div>
+            
             {/* Desktop menu */}
             <nav className="hidden md:flex space-x-8">
               <Link to="/" className={getLinkClass("/")}>

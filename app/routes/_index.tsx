@@ -21,7 +21,7 @@ const components = [
   { name: '', Component: CloudTextBlock5, description: 'Animated particles floating around key phrases.' },
   { name: '', Component: CloudTextBlock3, description: 'Text with a glitch effect, perfect for a cyberpunk aesthetic.' },
   { name: '', Component: CloudTextBlock6, description: 'Smooth text morphing animation between different phrases.' },
-  { name: '', Component: CloudTextBlock2, description: 'Text with a flowing gradient animation resembling waves.' },
+
   { name: '', Component: CloudTextBlock7, description: 'Text with a flowing gradient animation resembling waves.' },
   { name: '', Component: CloudTextBlock8, description: 'Text with a flowing gradient animation resembling waves.' },
   { name: '', Component: CloudTextBlock9, description: 'Text with a flowing gradient animation resembling waves.' },

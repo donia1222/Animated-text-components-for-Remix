@@ -1,26 +1,26 @@
-import { Link, useLocation } from "@remix-run/react"; // Importa useLocation
+'use client'
+
+import { Link, useLocation } from "@remix-run/react";
 import { useState } from "react";
 import { Menu, X, Sparkles, MousePointer, Image } from "lucide-react";
 
 export default function Component({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation(); // Obtén la ubicación actual
+  const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+
   const getLinkClass = (path: string) => {
-    return `flex items-center px-3 py-2 rounded-md text-base font-medium ${location.pathname === path ? 'bg-cyan-500 text-white' : 'text-gray-700 hover:text-red-600 hover:bg-red-50'} transition duration-150 ease-in-out`;
+    return `flex items-center px-3 py-2 rounded-md text-base font-medium ${
+      location.pathname === path
+        ? 'bg-cyan-500 text-white'
+        : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+    } transition duration-150 ease-in-out`;
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-red-100 relative">
-
       {/* SVG Background */}
       <div className="absolute inset-0 z-0 opacity-10">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -33,11 +33,15 @@ export default function Component({ children }: { children: React.ReactNode }) {
 
       {/* Header */}
       <header className="relative z-10 bg-white bg-opacity-90 backdrop-blur-md shadow-md">
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center"></div>
+            {/* Logo */}
+            <div className="flex items-center">
+              <Link to="https://roberto.lweb.ch" className="text-2xl font-bold">
+                <span className="text-blue-500">LWEB </span>
+                <span className="text-pink-400">Schweiz</span>
+              </Link>
+            </div>
             
             {/* Desktop menu */}
             <nav className="hidden md:flex space-x-8">
@@ -45,7 +49,6 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <Sparkles className="h-5 w-5 mr-1" />
                 <span>Text Animation</span>
               </Link>
-
               <Link to="/about" className={getLinkClass("/about")}>
                 <MousePointer className="h-5 w-5 mr-1" />
                 <span>Modern Button</span>
@@ -71,12 +74,10 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <Sparkles className="h-5 w-5 mr-2" />
                 <span>Text Animation</span>
               </Link>
-
               <Link to="/about" onClick={closeMenu} className={getLinkClass("/about")}>
                 <MousePointer className="h-5 w-5 mr-2" />
                 <span>Modern Button</span>
               </Link>
-
               <Link to="/contact" onClick={closeMenu} className={getLinkClass("/contact")}>
                 <Image className="h-5 w-5 mr-2" />
                 <span>Modern Carousel</span>

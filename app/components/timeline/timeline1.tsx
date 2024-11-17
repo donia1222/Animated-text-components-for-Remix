@@ -101,7 +101,7 @@ export default function TimelineComponent() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">Mi Trayectoria como Desarrollador</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">My Developer Journey</h1>
         <div ref={containerRef} className="relative h-[300vh]">
           <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center">
             <motion.div
@@ -186,7 +186,7 @@ export default function TimelineComponent() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">Mi Trayectoria como Desarrollador</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">My Developer Journey</h1>
         <div ref={containerRef} className="relative h-[300vh]">
           <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center">
             <motion.div

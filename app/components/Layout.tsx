@@ -2,7 +2,7 @@
 
 import { Link, useLocation } from "@remix-run/react";
 import { useState } from "react";
-import { Menu, X, Sparkles, MousePointer, Image, ExternalLink } from "lucide-react";
+import { Menu, X, Sparkles, MousePointer, Image, ExternalLink,ChartNoAxesGantt } from "lucide-react";
 
 export default function Component({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,13 +49,17 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <Sparkles className="h-5 w-5 mr-1" />
                 <span>Text Animation</span>
               </Link>
-              <Link to="/about" className={getLinkClass("/about")}>
+              <Link to="/button" className={getLinkClass("/about")}>
                 <MousePointer className="h-5 w-5 mr-1" />
                 <span>Modern Button</span>
               </Link>
-              <Link to="/contact" className={getLinkClass("/contact")}>
+              <Link to="/carrousel" className={getLinkClass("/contact")}>
                 <Image className="h-5 w-5 mr-1" />
                 <span>Modern Carousel</span>
+              </Link>
+              <Link to="/timeline" className={getLinkClass("/contact")}>
+                <ChartNoAxesGantt className="h-5 w-5 mr-1" />
+                <span>Timeline</span>
               </Link>
               <a href="https://roberto.lweb.ch" className={`${getLinkClass("")} text-green-600 hover:text-green-700`}>
                 <ExternalLink className="h-5 w-5 mr-1" />
@@ -78,13 +82,17 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <Sparkles className="h-5 w-5 mr-2" />
                 <span>Text Animation</span>
               </Link>
-              <Link to="/about" onClick={closeMenu} className={getLinkClass("/about")}>
+              <Link to="/button" onClick={closeMenu} className={getLinkClass("/about")}>
                 <MousePointer className="h-5 w-5 mr-2" />
                 <span>Modern Button</span>
               </Link>
-              <Link to="/contact" onClick={closeMenu} className={getLinkClass("/contact")}>
+              <Link to="/carrousel" onClick={closeMenu} className={getLinkClass("/contact")}>
                 <Image className="h-5 w-5 mr-2" />
                 <span>Modern Carousel</span>
+              </Link>
+              <Link to="/timeline" className={getLinkClass("/contact")}>
+                <ChartNoAxesGantt className="h-5 w-5 mr-1" />
+                <span>Timeline</span>
               </Link>
               <a href="https://roberto.lweb.ch" onClick={closeMenu} className={`${getLinkClass("")} text-green-600 hover:text-green-700`}>
                 <ExternalLink className="h-5 w-5 mr-2" />

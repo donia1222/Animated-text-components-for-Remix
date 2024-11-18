@@ -2,14 +2,24 @@
 
 import { Link, useLocation } from "@remix-run/react";
 import { useState, useEffect } from "react";
-import { Menu, X, Sparkles, MousePointer, Image, ExternalLink, Activity } from "lucide-react";
+import { Menu, X, Sparkles, MousePointer, Image, ExternalLink, Activity, Loader2 } from 'lucide-react';
 
 export default function Component({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [location]);
 
   const getLinkClass = (path: string) => {
     return `flex items-center px-3 py-2 rounded-md text-base font-medium ${
@@ -103,6 +113,13 @@ export default function Component({ children }: { children: React.ReactNode }) {
           </div>
         )}
       </header>
+
+      {/* Loader */}
+      {isLoading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-75">
+          <Loader2 className="w-12 h-12 text-cyan-500 animate-spin" />
+        </div>
+      )}
 
       {/* Main content */}
       <main className="relative z-10 py-6 sm:px-6 lg:px-8">

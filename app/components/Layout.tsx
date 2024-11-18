@@ -1,8 +1,8 @@
 'use client'
 
 import { Link, useLocation } from "@remix-run/react";
-import { useState } from "react";
-import { Menu, X, Sparkles, MousePointer, Image, ExternalLink,ChartNoAxesGantt } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, Sparkles, MousePointer, Image, ExternalLink, Activity } from "lucide-react";
 
 export default function Component({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ export default function Component({ children }: { children: React.ReactNode }) {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center">
-              <Link to="https://roberto.lweb.ch" className="text-2xl font-bold">
+              <Link to="https://roberto.lweb.ch" className="text-2xl font-bold" target="_blank" rel="noopener noreferrer">
                 <span className="text-blue-500">LWEB </span>
                 <span className="text-pink-400">Schweiz</span>
               </Link>
@@ -49,23 +49,24 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <Sparkles className="h-5 w-5 mr-1" />
                 <span>Text Animation</span>
               </Link>
-              <Link to="/button" className={getLinkClass("/about")}>
+              <Link to="/button" className={getLinkClass("/button")}>
                 <MousePointer className="h-5 w-5 mr-1" />
                 <span>Modern Button</span>
               </Link>
-              <Link to="/carrousel" className={getLinkClass("/contact")}>
+              <Link to="/carrousel" className={getLinkClass("/carrousel")}>
                 <Image className="h-5 w-5 mr-1" />
                 <span>Modern Carousel</span>
               </Link>
-              <Link to="/timeline" className={getLinkClass("/contact")}>
-                <ChartNoAxesGantt className="h-5 w-5 mr-1" />
+              <Link to="/timeline" className={getLinkClass("/timeline")}>
+                <Activity className="h-5 w-5 mr-1" />
                 <span>Timeline</span>
               </Link>
-              <a href="https://roberto.lweb.ch" className={`${getLinkClass("")} text-green-600 hover:text-green-700`}>
+              <a href="https://roberto.lweb.ch" className={`${getLinkClass("")} text-green-600 hover:text-green-700`} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-5 w-5 mr-1" />
                 <span>Go to LWEB</span>
               </a>
             </nav>
+
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button onClick={toggleMenu} className="text-gray-700 hover:text-red-600 focus:outline-none">
@@ -82,19 +83,19 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <Sparkles className="h-5 w-5 mr-2" />
                 <span>Text Animation</span>
               </Link>
-              <Link to="/button" onClick={closeMenu} className={getLinkClass("/about")}>
+              <Link to="/button" onClick={closeMenu} className={getLinkClass("/button")}>
                 <MousePointer className="h-5 w-5 mr-2" />
                 <span>Modern Button</span>
               </Link>
-              <Link to="/carrousel" onClick={closeMenu} className={getLinkClass("/contact")}>
+              <Link to="/carrousel" onClick={closeMenu} className={getLinkClass("/carrousel")}>
                 <Image className="h-5 w-5 mr-2" />
                 <span>Modern Carousel</span>
               </Link>
-              <Link to="/timeline" className={getLinkClass("/contact")}>
-                <ChartNoAxesGantt className="h-5 w-5 mr-1" />
+              <Link to="/timeline" onClick={closeMenu} className={getLinkClass("/timeline")}>
+                <Activity className="h-5 w-5 mr-2" />
                 <span>Timeline</span>
               </Link>
-              <a href="https://roberto.lweb.ch" onClick={closeMenu} className={`${getLinkClass("")} text-green-600 hover:text-green-700`}>
+              <a href="https://roberto.lweb.ch" onClick={closeMenu} className={`${getLinkClass("")} text-green-600 hover:text-green-700`} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-5 w-5 mr-2" />
                 <span>Go to LWEB</span>
               </a>

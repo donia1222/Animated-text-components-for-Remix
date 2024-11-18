@@ -177,17 +177,14 @@ export default function TimelineComponent() {
         </AnimatePresence>
       </div>
 
-      <div className="h-screen flex items-center justify-center bg-gray-800 text-white">
-        <h2 className="text-3xl font-bold">Diseñando el Futuro del Desarrollo</h2>
-      </div>
     }
     `.trim();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">
+    <div className=" bg-gradient-to-b from-gray-100 to-gray-200">
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">My Developer Journey</h1>
-        <div ref={containerRef} className="relative h-[300vh]">
+        <div ref={containerRef} className="relative h-[200vh]">
           <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center">
             <motion.div
               className="w-full max-w-4xl bg-white rounded-xl shadow-2xl p-8"
@@ -228,10 +225,10 @@ export default function TimelineComponent() {
         </div>
 
         {/* Botón para Mostrar/Ocultar Código */}
-        <div className="mt-8 flex justify-center">
+        <div className=" flex justify-center">
           <button
             onClick={toggleCode}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-2 px-4 rounded-full flex items-center space-x-2 transition-all duration-200 transform hover:scale-105"
+            className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold py-2 px-4 rounded-full flex items-center space-x-2 transition-all duration-200 transform hover:scale-105"
           >
             {showCode ? 'Hide Code' : 'Show Code'}
           </button>
@@ -262,9 +259,6 @@ export default function TimelineComponent() {
         </AnimatePresence>
       </div>
 
-      <div className="h-screen flex items-center justify-center bg-gray-800 text-white">
-        <h2 className="text-3xl font-bold">Designing the Future of Development</h2>
-      </div>
     </div>
   );
 }

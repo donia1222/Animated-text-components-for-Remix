@@ -1,6 +1,9 @@
 'use client'
 import Timeline1 from '~/components/timeline/timeline1'
 import Timeline2 from '~/components/timeline/timeline2'
+import Timeline3 from '~/components/timeline/timeline3'
+import Timeline4 from '~/components/timeline/timeline4'
+
 
 export default function Index() {
 
@@ -9,6 +12,9 @@ export default function Index() {
     <div className="">
 
        <Timeline1 />
+
+       <Timeline3 />
+       <Timeline4 />
        <Timeline2 />
       <footer className="bg-blue-200 bg-opacity-50 py-6 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

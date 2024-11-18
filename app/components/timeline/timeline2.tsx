@@ -163,7 +163,7 @@ export default function Component() {
 `.trim()
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center p-4 sm:p-8 mt-20">
+    <div className=" bg-gray-50 flex flex-col justify-center items-center p-4 sm:p-8 mt-20">
       <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8 text-center text-gray-800">My Professional Journey</h1>
       <div className="w-full max-w-2xl mx-auto relative overflow-hidden rounded-lg shadow-lg">
         <AnimatePresence mode="wait">

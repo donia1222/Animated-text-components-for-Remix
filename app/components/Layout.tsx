@@ -2,7 +2,7 @@
 
 import { Link, useLocation } from "@remix-run/react";
 import { useState, useEffect } from "react";
-import { Menu, X, Sparkles, MousePointer, Image, ExternalLink, Activity, Loader2 } from 'lucide-react';
+import { Menu, X, Sparkles, MousePointer, Image, ExternalLink, Activity, Loader2, FileText } from 'lucide-react';
 
 export default function Component({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,6 +71,10 @@ export default function Component({ children }: { children: React.ReactNode }) {
                 <Activity className="h-5 w-5 mr-1" />
                 <span>Timeline</span>
               </Link>
+              <Link to="/forms" className={getLinkClass("/forms")}>
+                <FileText className="h-5 w-5 mr-1" />
+                <span>Forms</span>
+              </Link>
               <a href="https://roberto.lweb.ch" className={`${getLinkClass("")} text-green-600 hover:text-green-700`} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-5 w-5 mr-1" />
                 <span>Go to LWEB</span>
@@ -104,6 +108,10 @@ export default function Component({ children }: { children: React.ReactNode }) {
               <Link to="/timeline" onClick={closeMenu} className={getLinkClass("/timeline")}>
                 <Activity className="h-5 w-5 mr-2" />
                 <span>Timeline</span>
+              </Link>
+              <Link to="/forms" onClick={closeMenu} className={getLinkClass("/forms")}>
+                <FileText className="h-5 w-5 mr-2" />
+                <span>Forms</span>
               </Link>
               <a href="https://roberto.lweb.ch" onClick={closeMenu} className={`${getLinkClass("")} text-green-600 hover:text-green-700`} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-5 w-5 mr-2" />
